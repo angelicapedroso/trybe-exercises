@@ -6,4 +6,4 @@ if (a > b) {
 }
 else {
     console.log("'b é o maior'")
-}
+};
