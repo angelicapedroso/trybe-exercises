@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -60,7 +60,26 @@
         </fieldset>
         
         <fieldset>
-          
+          <div>
+          <label for="resumeSummary">Resumo do currículo</label>
+          <textarea name="resumeSummary" id="resumeSummary" cols="30" rows="10" maxlength="1000" required></textarea>
+        </div>
+        
+        <div>
+          <label for="role">Cargo</label>
+          <input type="text" name="role" id="role" maxlength="40" required>
+        </div>
+        
+        <div>
+          <label for="roleDescription">Descrição do cargo</label>
+          <input type="text" name="roleDescription" id="roleDescription" maxlength="500" required>
+        </div>
+        
+        <div>
+          <label for="startDate">Data de início</label>
+          <input type="date" name="startDate" id="startDate" required>
+        </div>
+        
         </fieldset>
     </form>
   </main>
