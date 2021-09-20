@@ -12,7 +12,6 @@ body {
 .header-container {
   background-color: #5C687C;
   display: flex;
-  flex-basis: ;
 }
 
 .logo-container {
@@ -40,4 +39,5 @@ body {
   font-size: 1.3rem;
   list-style: none;
   margin-right: 10px;
+  align-self: center;
 }
