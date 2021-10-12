@@ -60,9 +60,11 @@ const books = [{
   },
 ];
 
-// 4 - Ordene os livros por data de lançamento em ordem decrescente.
+// 5 - Faça uma função que retorne true , se todas as pessoas autoras nasceram no século XX, ou false , caso contrário.
 // Adicione o código do exercício aqui:
-function descendingReleaseOrder() {
-  return books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);
+function everyoneWasBornOnSecXX() {
+  return books.every((book) => (
+    book.author.birthYear > 1900 && book.author.birthYear <= 2000
+  ));
 }
-console.log(descendingReleaseOrder());
+console.log(everyoneWasBornOnSecXX());
