@@ -1,4 +1,5 @@
-const books = [{
+const books = [
+  {
     id: 1,
     name: 'As Crônicas de Gelo e Fogo',
     genre: 'Fantasia',
@@ -60,17 +61,9 @@ const books = [{
   },
 ];
 
-// 2 - Retorne o nome do livro de menor nome.
+// 4 - Ordene os livros por data de lançamento em ordem decrescente.
 // Adicione o código do exercício aqui:
-function smallerName() {
-  let nameBook = 0;
-  // escreva aqui o seu código
-  books.forEach((book) => {
-    if (!nameBook || book.name.length < nameBook.length) {
-      nameBook = book.name;
-    }
-  })
-  // Variável nameBook que receberá o valor do menor nome;
-  return nameBook;
+function descendingReleaseOrder () {
+  return books.sort((bookA, bookB) => bookB.releaseYear - bookA.releaseYear);
 }
-console.log(smallerName());
+console.log(descendingReleaseOrder());
