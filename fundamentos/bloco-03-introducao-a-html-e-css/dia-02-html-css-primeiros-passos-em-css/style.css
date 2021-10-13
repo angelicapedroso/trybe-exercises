@@ -1,0 +1,28 @@
+h1 {
+    font-family:sans-serif;
+    font-size:65px;
+    color: orange;
+}
+
+p{
+  font-weight: 600;
+  font-size: 3em;       
+ }
+
+ body {
+   font-size: 16px;
+   font-style: italic;
+   text-align: center
+  }
+ 
+ ul {
+background-color: purple;
+  line-height: 20px;
+}
+
+#colors { background-color: orchid;}
+.favorite { background-color: palegreen;}
+
+#amarelo {background-color: yellow;}
+#vermelho {background-color: red;}
+#marrom {background-color: brown;}
