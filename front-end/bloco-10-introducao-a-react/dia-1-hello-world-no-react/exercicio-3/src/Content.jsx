@@ -19,17 +19,23 @@ const conteudos = [
   {
     conteudo: 'Redux',
     bloco: 16,
-    status: 'Aprenderei'
+    status: 'Aprenderei',
   },
 ];
 
 class Content extends Component {
   render() {
     return (
-      <p>
-        
-      </p>
-     )
+      <>
+        {conteudos.map((element) => (
+          <div key={element.conteudo}>
+            <h3>{`O conteúdo é: ${element.conteudo}`}</h3>
+            <p>{`Status: ${element.status}`}</p>
+            <p>{`Bloco: ${element.bloco}`}</p>
+          </div>
+        ))}
+      </>
+    );
   }
 }
 
