@@ -1,5 +1,5 @@
 import React from "react";
-import propTypes from 'prop-types';
+import Pokemon from './Pokemon'
 
 class Pokedex extends React.Component {
     render() {
