@@ -1,16 +1,19 @@
 const readline = require('readline-sync');
 
-const peso = readline.question('Qual seu peso?');
-const altura = readline.questionFloat('Qual sua altura (em metros)?');
-const imc = peso / altura ** 2;
+const getImc = () => {
+  const peso = readline.question('Qual seu peso?');
+  const altura = readline.questionFloat('Qual sua altura (em metros)?');
+  const imc = peso / altura ** 2;
+  console.log(`IMC: ${imc.toFixed(1)}`);
 
-const getImc = (imc) => {
-  if(imc < 18.5) return 'abaixo do peso (magreza)';
-  else if(imc < 25) return 'peso normal';
-  else if(imc < 30) return 'acima do peso (sobrepeso)';
-  else if(imc < 35) return 'obesidade grau I';
-  else if(imc < 40) return 'obesidade grau II';
-  else return 'obesidade grau III';
+  if (imc < 18.5) return console.log('Abaixo do peso (magreza)');
+  else if (imc < 25) return console.log('Peso normal');
+  else if (imc < 30) return console.log('Acima do peso (sobrepeso)');
+  else if (imc < 35) return console.log('Obesidade grau I');
+  else if (imc < 40) return console.log('Obesidade grau II');
+  else return console.log('Obesidade grau III');
 }
 
-console.log(`Seu IMC é de ${imc.toFixed(1)}, ${getImc(imc)}.`);
+getImc();
+
+module.exports = getImc;
