@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "imc": "node imc.js",
-    "velocidade": "node velocidade.js",
-    "sorteio": "node sorteio.js",
+    "start": "node src/index.js",
+    "imc": "node src/imc.js",
+    "velocidade": "node src/velocidade.js",
+    "sorteio": "node src/sorteio.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
