@@ -13,6 +13,15 @@ const getNumber = (num1, num2, num3) => {
   })
 }
 
-getNumber(10, 9, 8)
-  .then((resolve) => console.log(resolve))
-  .catch((err) => console.log(err.message));
+// getNumber(10, 9, 8)
+//   .then((resolve) => console.log(resolve))
+//   .catch((err) => console.log(err.message));
+
+const getRandomNumber = () => {
+  const random = Math.floor(Math.random() * 100 + 1);
+  getNumber(random, random, random)
+    .then((result) => console.log(result))
+    .catch((err) => console.log(err.message));
+}
+
+getRandomNumber();
