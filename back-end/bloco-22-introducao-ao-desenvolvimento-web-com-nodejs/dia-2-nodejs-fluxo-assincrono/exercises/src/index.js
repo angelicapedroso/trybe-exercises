@@ -17,11 +17,24 @@ const getNumber = (num1, num2, num3) => {
 //   .then((resolve) => console.log(resolve))
 //   .catch((err) => console.log(err.message));
 
-const getRandomNumber = () => {
+// const getRandomNumber = () => {
+//   const random = Math.floor(Math.random() * 100 + 1);
+//   getNumber(random, random, random)
+//     .then((result) => console.log(result))
+//     .catch((err) => console.log(err.message));
+// }
+
+// getRandomNumber();
+
+const getRandomNumber = async () => {
   const random = Math.floor(Math.random() * 100 + 1);
-  getNumber(random, random, random)
-    .then((result) => console.log(result))
-    .catch((err) => console.log(err.message));
+  try {
+    const result = await getNumber(random, random, random);
+    console.log(result);
+  }
+  catch (err) {
+    console.log(err.message); 
+  }
 }
 
 getRandomNumber();
