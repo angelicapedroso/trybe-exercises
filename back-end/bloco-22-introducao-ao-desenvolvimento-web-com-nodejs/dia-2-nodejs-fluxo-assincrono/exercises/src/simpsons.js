@@ -51,3 +51,18 @@ const getSimpsonId = () => {
 }
 
 getSimpsonId();
+
+
+const removeSimpsons = async () => {
+  try {
+    const fileContent = await fs.readFile(file, 'utf8');
+    const simpsons = JSON.parse(fileContent);
+    const newSimpsons = simpsons.filter((simpson) => simpson.id !== '10' && simpson.id !== '6');
+    await fs.writeFile(file, JSON.stringify(newSimpsons));
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+removeSimpsons()
