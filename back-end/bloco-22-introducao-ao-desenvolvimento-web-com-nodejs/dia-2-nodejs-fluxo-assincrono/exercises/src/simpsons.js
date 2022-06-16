@@ -66,3 +66,18 @@ const removeSimpsons = async () => {
 }
 
 removeSimpsons()
+
+const createSimpsonsFamily = async () => {
+  try {
+    const fileContent = await fs.readFile(file, 'utf8');
+    const simpsons = JSON.parse(fileContent);
+    const ids = [1, 2, 3, 4];
+    const simpsonsFamily = simpsons.filter((simpson) => ids.includes(Number(simpson.id)));
+    await fs.writeFile('./src/simpsonsFamily.json', JSON.stringify(simpsonsFamily));
+  }
+  catch (err) {
+    console.log(err.message);
+  }
+}
+
+createSimpsonsFamily();
